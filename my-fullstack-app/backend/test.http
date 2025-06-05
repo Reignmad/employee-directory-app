@@ -1,0 +1,29 @@
+### Get all employees
+GET http://localhost:5000/api/employees
+
+### Get employees by department
+GET http://localhost:5000/api/employees?department=engineering
+
+### Add a new employee
+POST http://localhost:5000/api/employees
+Content-Type: application/json
+
+{
+
+  "name": "Oabusa",
+  "surname": "Madubung",
+  "gender": "Male",
+  "department": "engineering",
+  "salary": 75000
+}
+
+### Update an employee (replace :id with actual ID)
+PUT http://localhost:5000/api/employees/6835edef510ad1ffc5da836b
+Content-Type: application/json
+
+{
+  "salary": 80000
+}
+
+### Delete an employee (replace :id with actual ID)
+DELETE http://localhost:5000/api/employees/6835edef510ad1ffc5da836b
